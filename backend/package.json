@@ -7,7 +7,7 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "nodemon server.js",
     "start": "npm run dev",
-    "prod": "pm2 start server.js --name=\"IVP API\""
+    "prod": "pm2 start server.js --name=\"G53IVP_API\""
   },
   "author": "",
   "license": "ISC",

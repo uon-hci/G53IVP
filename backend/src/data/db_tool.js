@@ -11,7 +11,6 @@ let db = null;
  */
 const open = (callback) => {
     const pathToDB = process.env.SQLITE_PATH;
-    console.log(pathToDB);
     db = new sqlite3.Database(pathToDB, (err) => {
         callback(err);
     });
