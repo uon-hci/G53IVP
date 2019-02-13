@@ -1,0 +1,6 @@
+backend/api/node_modules
+frontend/.cache
+frontend/node_modules
+sqlite/
+datasets/
+npm-debug.log

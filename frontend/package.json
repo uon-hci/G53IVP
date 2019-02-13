@@ -1,0 +1,24 @@
+{
+  "name": "ivp-frontend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@nivo/pie": "^0.52.1",
+    "parcel-bundler": "^1.11.0",
+    "react": "^16.8.1",
+    "react-dom": "^16.8.1",
+    "styled-components": "^4.1.3"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-react": "^7.0.0",
+    "babel-plugin-styled-components": "^1.10.0"
+  }
+}
