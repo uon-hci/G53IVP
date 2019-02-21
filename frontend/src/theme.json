@@ -1,4 +1,7 @@
 {
-    "navigationBar": "#0F0A0A",
-    "appTitle": "#2292a4"
+    "background": "#faf3dd",
+    "navigationBar": "#2a9134",
+    "appTitle": "#FFFFFF",
+    "menu": "#0a090c",
+    "menuItemHover": "#201f22"
 }

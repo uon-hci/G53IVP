@@ -9,7 +9,7 @@ import theme from './theme';
 const GlobalStyle = createGlobalStyle`
     @import url('https://fonts.googleapis.com/css?family=Roboto|Staatliches');
     body {
-        background-color: #F5EFED;
+        background-color: ${theme.background};
         margin: 0;
     }
 `;
