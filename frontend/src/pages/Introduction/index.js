@@ -1,9 +1,14 @@
 /* Modules */
 import React from 'react';
+import Title from '../../Title';
 
-const Introduction = () => {
+const Introduction = (props) => {
+    console.log(props);
     return(
-        <h1>Introduction</h1>
+        <React.Fragment>
+            <Title color='red'>Introduction</Title>
+            <p>Bla bla bla</p>
+        </React.Fragment>
     );
 };
 

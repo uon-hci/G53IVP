@@ -24,6 +24,12 @@ const Content = styled.div`
 /* Styled content */
 const Page = styled.div`
     padding: 20px;
+    padding-left: 50px;
+    padding-top: 30px;
+    flex-grow: 1;
+    background-color: ${props => props.theme.page};
+    border-top-left-radius: 30px;
+    color: ${props => props.theme.content};
 `;
 
 /**

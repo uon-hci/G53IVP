@@ -1,7 +1,9 @@
 {
-    "background": "#faf3dd",
-    "navigationBar": "#2a9134",
+    "primary": "#da2c38",
     "appTitle": "#FFFFFF",
-    "menu": "#0a090c",
-    "menuItemHover": "#201f22"
+    "menu": "#31393c",
+    "menuItem": "#AAAAAA",
+    "menuItemHover": "#201f22",
+    "page": "#FFFFFF",
+    "content": "#31393c"
 }
