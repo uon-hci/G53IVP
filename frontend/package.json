@@ -11,6 +11,7 @@
   "license": "ISC",
   "dependencies": {
     "@nivo/pie": "^0.52.1",
+    "antd": "^3.14.1",
     "parcel-bundler": "^1.11.0",
     "react": "^16.8.2",
     "react-dom": "^16.8.1",

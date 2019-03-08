@@ -1,18 +1,20 @@
 /* Pages */
-import Introduction from './pages/Introduction';
-import GeneralStats from './pages/GeneralStats';
+import Introduction from './Content/Introduction';
+import GeneralStats from './Content/GeneralStats';
 
 /* Routes */
 const routes = [
     {
-        name: 'introduction',
+        name: 'Introduction',
         path: '/',
         component: Introduction,
+        icon: 'bars'
     },
     {
-        name: 'general stats',
+        name: 'General stats',
         path: '/general-stats',
-        component: GeneralStats
+        component: GeneralStats,
+        icon: 'pie-chart'
     }
 ];
 
