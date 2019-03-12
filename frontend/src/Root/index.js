@@ -15,13 +15,12 @@ const { Header, Content, Sider } = Layout;
  */
 const Root = () => {
     return (
-        <div style={styles.container}>
-            <Router>
-                <Layout>
-                    <Header>
+        <Router>
+            <Layout style={{ height: '100vh' }}>
+                <Header>
                     <div style={styles.title}>PlayStore</div>
-                    </Header>
-                    <Layout>
+                </Header>
+                <Layout>
                     <Sider width={200}>
                         <Navigation />
                     </Sider>
@@ -30,10 +29,9 @@ const Root = () => {
                             <Routes />
                         </Content>
                     </Layout>
-                    </Layout>
                 </Layout>
-            </Router>
-        </div>
+            </Layout>
+        </Router>
     );
 };
 

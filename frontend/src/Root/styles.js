@@ -1,8 +1,4 @@
 const styles = {
-    container: {
-        display: 'flex',
-        height: '100%'
-    },
     title: {
         width: '180px',
         height: '31px',
@@ -21,7 +17,8 @@ const styles = {
         padding: '24px',
         paddingLeft: '30px',
         margin: 0, 
-        minHeight: 280
+        minHeight: 280,
+        overflowY: 'scroll'
     }
 }
 
