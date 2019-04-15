@@ -1,6 +1,6 @@
 /* Modules */
 import React from 'react';
-import routes from '../routes';
+import routes from '../../routes';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 
 /**

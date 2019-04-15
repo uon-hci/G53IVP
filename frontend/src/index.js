@@ -1,7 +1,7 @@
 /* Modules */
 import React from 'react';
 import { render } from 'react-dom';
-import Root from './Root';
+import Root from './components/Root';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import theme from './theme';
 
@@ -14,6 +14,7 @@ const GlobalStyle = createGlobalStyle`
     body {
         background-color: ${theme.primary};
         margin: 0;
+        overflow: hidden;
     }
 `;
 

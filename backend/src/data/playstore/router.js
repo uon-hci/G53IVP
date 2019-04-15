@@ -1,11 +1,11 @@
 /* Modules */
 const router = require('express').Router();
 const count = require('./count');
+const distribution = require('./distribution');
 
 /* Router */
 router.get('/count', count.all);
-// router.get('/count/successes', count.successes);
-// router.get('/count/failures', count.failures);
+router.get('/distribution/categories', distribution.categories);
 
 /* Export */
 module.exports = router;

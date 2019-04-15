@@ -1,11 +1,13 @@
 /* Modules */
 import React from 'react';
-import Pie from '../../Pie';
+import Pie from '../../visualizations/Pie';
 import styles from './styles';
+import Visualisation from '../../components/Visualisation';
 
 /* Antd */
-import { Typography, Tag, Card, Button, Statistic, Col, Row } from 'antd';
-const { Title } = Typography;
+import { Typography, Tag, Card, Statistic, Col, Row } from 'antd';
+const { Title, Paragraph } = Typography;
+
 
 /**
  * General stats
@@ -27,6 +29,13 @@ const GeneralStats = () => {
                     <Statistic title="Different Android devices " value={4000} />
                 </Row>
             </Card>
+            <Visualisation
+                height='600px'
+                orientation='left'
+                visualisation={<Pie url='http://localhost:3339/data/playstore/distribution/categories' />}
+                description='The Playstore contains a total of 33 different categories. This pie chart shows that the most common
+                ones are Family, Game, Tools, Medical, Business and Productivity.'
+            />
         </React.Fragment>
     );
 };

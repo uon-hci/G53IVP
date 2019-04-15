@@ -25,6 +25,13 @@ const Introduction = () => {
             Investigating such information through data analysis and visualization allows business entities to understand the users' desires, 
             needs and adapt their products to the correct market.
             </Paragraph>
+            <Title level={3}>Questions</Title>
+            <Paragraph>
+                <ul>
+                    <li>Question 1</li>
+                    <li>Question 2</li>
+                </ul>
+            </Paragraph>
         </Typography>
     );
 };

@@ -1,6 +1,6 @@
 /* Pages */
-import Introduction from './Content/Introduction';
-import GeneralStats from './Content/GeneralStats';
+import Introduction from './pages/Introduction';
+import GeneralStats from './pages/GeneralStats';
 
 /* Routes */
 const routes = [
