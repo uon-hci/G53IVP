@@ -32,7 +32,7 @@ const GeneralStats = () => {
             <Visualisation
                 height='600px'
                 orientation='left'
-                visualisation={<Pie url='http://localhost:3339/data/playstore/distribution/categories' />}
+                visualisation={<Pie url='playstore/distribution/categories' />}
                 description='The Playstore contains a total of 33 different categories. This pie chart shows that the most common
                 ones are Family, Game, Tools, Medical, Business and Productivity.'
             />

@@ -1,5 +1,9 @@
 /* Modules */
 import axios from 'axios';
+let hostname = 'http://localhost:3339';
+if (process.env.NODE_ENV == 'production') {
+    hostname = 'https://api.ivp.andynroses.me';
+}
 
 /**
  * Fetch data from url
@@ -7,8 +11,7 @@ import axios from 'axios';
  * @param {function} setter 
  */
 const get = async(url, setter) => {
-    const result = await axios(url);
-    console.log(result);
+    const result = await axios(hostname + '/data/' + url);
     setter(result.data);
 }
 
