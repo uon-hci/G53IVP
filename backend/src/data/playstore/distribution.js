@@ -1,6 +1,7 @@
 /* Modules */
 const db_tool = require('../db_tool');
 const config = require('./config');
+const formatter = require('../../utils/formatter');
 
 /**
  * Creates a distribution handler
@@ -20,6 +21,8 @@ const createDistributor = (column) => (req, res, next) => {
                 if (err) {
                     next(err);
                 } else {
+                    rows = rows.filter(row => row.label != 'NaN');
+                    rows.forEach(row => row.label = formatter.label(row.label));
                     res.status(200).json(rows);
                 }
             })
@@ -27,5 +30,6 @@ const createDistributor = (column) => (req, res, next) => {
     });
 }
 
-/* Counts all rows where the attribute state is successful */
 exports.categories = createDistributor('category');
+exports.types = createDistributor('type');
+exports.ratings = createDistributor('rating');

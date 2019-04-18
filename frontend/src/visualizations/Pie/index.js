@@ -1,13 +1,8 @@
 /* Modules */
 import React, { useState, useEffect } from 'react';
-import api from '../api';
 import { ResponsivePie } from '@nivo/pie';
 
-const Pie = ({ url }) => {
-    const [data, setData] = useState([]);
-    useEffect(() => {
-        api.get(url, setData);
-    }, []);
+const Pie = ({ data }) => {
     return (
         <ResponsivePie 
           data={data} 
@@ -21,7 +16,8 @@ const Pie = ({ url }) => {
             padAngle={0.7}
             cornerRadius={3}
             colors="nivo"
-            colorBy="id"
+            colorBy="label"
+            radialLabel="label"
             borderWidth={1}
             borderColor="inherit:darker(0.2)"
             radialLabelsSkipAngle={13}
