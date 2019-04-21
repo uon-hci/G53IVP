@@ -1,6 +1,6 @@
 backend/node_modules
 frontend/.cache
 frontend/node_modules
-sqlite/
+sqlite/G53IVP.sqlite
 datasets/
 npm-debug.log
