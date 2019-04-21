@@ -3,13 +3,13 @@ import React, { useState, useEffect } from 'react';
 import api from '../../api';
 import Visual from './Visual';
 import Data from './Data';
-import styled from 'styled-components';
+import Title from './Title';
 
 /* Antd */
 import { Card, Button, Icon } from 'antd';
 
 const Visualisation = (props) => {
-    const { url, title, ...other } = props;
+    const { url, title, icon, ...other } = props;
     const [sourceMode, setSourceMode] = useState(false);
     const [data, setData] = useState([]);
     const modeIcon = sourceMode ? 'pie-chart' : 'database';
@@ -20,7 +20,9 @@ const Visualisation = (props) => {
         api.get(url, setData);
     }, []);
     return (
-        <Card style={{ marginBottom: '16px' }} title={title} extra={<Button onClick={onModeClick}><Icon type={modeIcon} />{ modeText }</Button>}>
+        <Card style={{ marginBottom: '16px' }} 
+            title={<Title text={title} icon={icon} />} 
+            extra={<Button onClick={onModeClick}><Icon type={modeIcon} />{ modeText }</Button>}>
             { Content }
         </Card>
     );

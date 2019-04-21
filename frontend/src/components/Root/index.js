@@ -24,11 +24,7 @@ const Root = () => {
                     <Sider width={200}>
                         <Navigation />
                     </Sider>
-                    <Layout style={styles.contentLayout}>
-                        <Content style={styles.content}>
-                            <Routes />
-                        </Content>
-                    </Layout>
+                    <Routes />
                 </Layout>
             </Layout>
         </Router>

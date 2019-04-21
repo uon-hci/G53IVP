@@ -7,7 +7,7 @@ import routes from '../../routes';
 /* Navigation bar */
 const Navigation = ({ location }) => {
     return(
-        <Menu mode="inline" defaultSelectedKeys={[location.pathname]} style={{ height: '100%', borderRight: 0 }}>
+        <Menu mode="inline" selectedKeys={[location.pathname]} style={{ height: '100%', borderRight: 0 }}>
             { routes.map(route => (
                 <Menu.Item key={route.path}>                    
                     <Link to={route.path}><Icon type={route.icon} /> {route.name}</Link>

@@ -1,6 +1,7 @@
 /* Pages */
 import Introduction from './pages/Introduction';
 import GeneralStats from './pages/GeneralStats';
+import Categories from './pages/Categories';
 
 /* Routes */
 const routes = [
@@ -15,6 +16,12 @@ const routes = [
         path: '/general-stats',
         component: GeneralStats,
         icon: 'pie-chart'
+    },
+    {
+        name: 'Categories',
+        path: '/categories',
+        component: Categories,
+        icon: 'appstore'
     }
 ];
 

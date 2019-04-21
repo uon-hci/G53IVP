@@ -4,6 +4,10 @@ import { render } from 'react-dom';
 import Root from './components/Root';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import theme from './theme';
+import { library } from '@fortawesome/fontawesome-svg-core';
+import { far } from '@fortawesome/free-regular-svg-icons';
+import { fas } from '@fortawesome/free-solid-svg-icons';
+library.add(far, fas);
 
 /* Global style */
 const GlobalStyle = createGlobalStyle`
@@ -15,6 +19,9 @@ const GlobalStyle = createGlobalStyle`
         background-color: ${theme.primary};
         margin: 0;
         overflow: hidden;
+    }
+    .ant-typography {
+        font-size: 16px;
     }
 `;
 

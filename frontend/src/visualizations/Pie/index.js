@@ -15,7 +15,6 @@ const Pie = ({ data }) => {
             innerRadius={0.5}
             padAngle={0.7}
             cornerRadius={3}
-            colors="nivo"
             colorBy="label"
             radialLabel="label"
             borderWidth={1}
@@ -30,7 +29,6 @@ const Pie = ({ data }) => {
             radialLabelsLinkColor="inherit"
             slicesLabelsSkipAngle={13}
             slicesLabelsTextColor="#333333"
-            animate={true}
             motionStiffness={90}
             motionDamping={15}
         />
