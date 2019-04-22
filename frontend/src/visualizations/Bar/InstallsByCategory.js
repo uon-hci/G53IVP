@@ -2,26 +2,29 @@
 import React from 'react';
 import { ResponsiveBar } from '@nivo/bar';
 
-const InstallsByCategory = ({ data, axis }) => {
+const InstallsByCategory = ({ data }) => {
     return (
         <ResponsiveBar 
             data={data} 
             indexBy="label"
             margin={{
-                "top": 0,
+                "top": 10,
                 "right": 130,
-                "bottom": 80,
+                "bottom": 140,
                 "left": 150
             }}
             colorBy="value"
             enableLabel={false}
             enableGridX
-            axisBottom={{
+            axisLeft={{
                 "legend": "installations",
                 "legendPosition": "middle",
-                "legendOffset": 50
+                "legendOffset": -90
             }}
-            layout='horizontal'
+            axisBottom={{
+                "tickRotation": 50
+            }}
+            // layout='horizontal'
             legends={[]}
             labelTextColor={{
                 "from": "color",

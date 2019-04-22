@@ -9,16 +9,17 @@ import Title from './Title';
 import { Card, Button, Icon } from 'antd';
 
 const Visualisation = (props) => {
-    const { url, title, icon, ...other } = props;
+    const { title, icon, ...other } = props;
     const [sourceMode, setSourceMode] = useState(false);
+    const [url, setUrl] = useState(props.url);
     const [data, setData] = useState([]);
     const modeIcon = sourceMode ? 'pie-chart' : 'database';
     const modeText = sourceMode ? 'Visualisation' : 'Data';
     const onModeClick = () => setSourceMode(!sourceMode);
-    const Content = sourceMode ? <Data data={data} height={props.height} /> : <Visual {...other} data={data} />;
+    const Content = sourceMode ? <Data data={data} height={props.height} /> : <Visual {...other} {...{data}} {...{setUrl}} />;
     useEffect(() => {
         api.get(url, setData);
-    }, []);
+    }, [url]);
     return (
         <Card style={{ marginBottom: '16px' }} 
             title={<Title text={title} icon={icon} />} 

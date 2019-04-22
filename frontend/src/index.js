@@ -5,9 +5,8 @@ import Root from './components/Root';
 import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import theme from './theme';
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { far } from '@fortawesome/free-regular-svg-icons';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-library.add(far, fas);
+library.add(fas);
 
 /* Global style */
 const GlobalStyle = createGlobalStyle`

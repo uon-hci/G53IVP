@@ -4,8 +4,8 @@ const config = require('./config');
 const formatter = require('../../utils/formatter');
 
 /**
- * Creates a distribution handler
- * @param {string} condition 
+ * Creates a sum handler
+ * @param {string} column 
  */
 const createSum = (column) => (req, res, next) => {
     db_tool.get((err, db) => {
@@ -21,13 +21,18 @@ const createSum = (column) => (req, res, next) => {
             if (req.query.skip) {
                 query += `\nHAVING value > ${req.query.skip}`;
             }
+            if (req.query.filter) {
+                query += `\nHAVING ${req.query.filter} = '${req.query[req.query.filter]}'`;
+            }
             if (req.query.ordered) {
                 query += `\nORDER BY value`;
                 if (req.query.ordered == 'desc') {
                     query += ' DESC'
                 }
             }
-            console.log(query);
+            if (req.query.limit) {
+                query += `\nLIMIT ${req.query.limit}`;
+            }
             db.all(query, [], (err, rows) => {
                 if (err) {
                     next(err);
@@ -40,5 +45,5 @@ const createSum = (column) => (req, res, next) => {
     });
 }
 
-exports.installs = createSum('installs');
+exports.sumInstalls = createSum('installs');
 

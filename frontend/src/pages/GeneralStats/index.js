@@ -37,7 +37,7 @@ const GeneralStats = () => {
                 side
                 height='600px'
                 orientation='left'
-                url='playstore/distribution/categories'
+                url='playstore/distribution/categories?skip=300'
                 visualisation={Pie}
                 description={<Text>Applications are categorised based on their content. These categories help users identify
                     the type of application they wish to obtain. The Playstore contains a total of 33 different categories. 

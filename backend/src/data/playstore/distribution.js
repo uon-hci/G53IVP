@@ -17,12 +17,16 @@ const createDistributor = (column) => (req, res, next) => {
             FROM ${config.table}
             GROUP BY ${column}
             `;
+            if (req.query.filter) {
+                query += `\nHAVING ${req.query.filter} = '${req.query[req.query.filter]}'`;
+            }
             if (req.query.skip) {
                 query += `\nHAVING value > ${req.query.skip}`;
             }
             if (req.query.ordered) {
                 query += `\nORDER BY value`;
             }
+            console.log(query)
             db.all(query, [], (err, rows) => {
                 if (err) {
                     next(err);
@@ -73,6 +77,7 @@ const createAcculumatedDistributor = (column) => (req, res, next) => {
 }
 
 exports.categories = createDistributor('category');
+exports.genres = createDistributor('genre');
 exports.types = createDistributor('type');
 exports.ratings = createAcculumatedDistributor('rating');
 exports.sizes = createAcculumatedDistributor('size');

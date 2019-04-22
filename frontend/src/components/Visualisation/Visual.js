@@ -17,9 +17,9 @@ const MyRow = styled(Row)`
 
 
 const SideToSide = ( { visualisation, orientation, description, height }) => {
-    const graph = <MyCol height={height} span={16}>{ visualisation }</MyCol>
-    const Before = orientation == 'left' ? graph : null;
-    const After = orientation == 'right' ? graph : null;
+    const display = <MyCol height={height} span={16}>{ visualisation }</MyCol>
+    const Before = orientation == 'left' ? display : null;
+    const After = orientation == 'right' ? display : null;
     return (
         <Row type="flex" justify="space-around" align="middle">
             { Before }
@@ -48,13 +48,13 @@ const OverUnder = ({ visualisation, description, discussion, height }) => {
 }
 
 const Visual = (props) => {
-    const { data, side, axis, height, visualisation, orientation, description, discussion } = props;
-    let Graph = visualisation;
-    Graph = <Graph data={data} axis={axis} />;
+    const { data, side, axis, height, visualisation, orientation, description, discussion, setUrl } = props;
+    let Display = visualisation;
+    Display = <Display {...{data}} {...{axis}} {...{setUrl}} />;
     if (side) {
-        return <SideToSide visualisation={Graph} {...{orientation}} {...{description}} {...{height}} />;
+        return <SideToSide visualisation={Display} {...{orientation}} {...{description}} {...{height}} />;
     } else {
-        return <OverUnder visualisation={Graph} {...{description}} {...{discussion}} {...{height}} />;
+        return <OverUnder visualisation={Display} {...{description}} {...{discussion}} {...{height}} />;
     }
 };
 
