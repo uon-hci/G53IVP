@@ -24,6 +24,9 @@ const Categories = () => {
             <Typography>
                 <Tag>#category</Tag>
                 <Tag>#genre</Tag>
+                <Tag>#installations</Tag>
+                <Tag>#prices</Tag>
+                <Tag>#ratings</Tag>
                 <Title level={2}>Categories</Title>
             </Typography>
             <Visualisation
@@ -75,22 +78,16 @@ const Categories = () => {
                      plateforms and services that user do not own but only have access to.</Paragraph></Typography>}
             />
             <Visualisation
-                title='Number of free and paid  apps by category'
-                icon='dollar-sign'
+                title='Ratings by category and genres'
+                icon='star'
                 height='500px'
                 url='playstore/custom/genre_list_category'
                 visualisation={CategoryGenres}
-                description={<Typography><Paragraph>In the <Link to='/general-stats'>General Statistics </Link> a pie
-                chart was used to show the distribution of free and paid applications throughout the Playstore.
-                How does that relate for each category? Are there categories more expensive than others?</Paragraph></Typography>}
-                discussion={<Typography><Paragraph>This graph shows that the categories 
-                    <Text strong> Personalization </Text> and <Text strong>Medical </Text>
-                    are the ones containing a larger amount of paid applications, followed by the 
-                    <Text strong> Books and Reference </Text> and the <Text strong>Weather</Text>.
-                     Perhaps this could be explained by the fact that these categories contain applications
-                     that mainly offer a specific feature, service or tool that the user will then own (an instance of it)
-                     to use indefinitely ; while categories like <Text strong>Social </Text> offer
-                     plateforms and services that user do not own but only have access to.</Paragraph></Typography>}
+                description={<Typography><Paragraph>In addition to categories, the Playstore also presents sub-categories,
+                     called genres, that can help users divide the big categories into smaller ones. This is for example
+                     mostly used for the categories <Text strong>Family </Text> and <Text strong>Game </Text>
+                     that are very broad and popular sections with a lot of possible sub-sections. The following
+                     visualisation allows you to browse these categories and genres and see their corresponding ratings.</Paragraph></Typography>}
             />
         </Wrapper>
     );

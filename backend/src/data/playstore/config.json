@@ -1,3 +1,4 @@
 {
-    "table": "googleplaystore"
+    "table": "googleplaystore",
+    "extra": "googleplaystore_user_reviews"
 }

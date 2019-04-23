@@ -13,6 +13,7 @@
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
+    "count-words-array": "^1.0.12",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "morgan": "^1.9.1",

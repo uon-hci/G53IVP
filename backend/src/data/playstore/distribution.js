@@ -51,19 +51,24 @@ const createAcculumatedDistributor = (column) => (req, res, next) => {
             next(err);
         } else {
             const range = JSON.parse(req.query.range) || [1, 10];
-            const width = parseInt(req.query.width) || 1;
+            const width = parseFloat(req.query.width) || 1;
             let query = ``;
             for (let i = range[0]; i < range[1]; i = i + width) {
                 if (i > range[0]) {
                     query += '\nUNION\n';
                 }
-                lastRange = i;
                 query += `
                 SELECT '${i} - ${i + width}' as id, COUNT(*) as value
                 FROM ${config.table}
-                WHERE ${column} >= ${i}
-                AND ${column} <= ${i + width}
-                `      
+                WHERE ${column} >= ${i}`
+                let upperCompare = '<';
+                if (i == range[1] - 1) {
+                    upperCompare = '<=';
+                }
+                query += `\nAND ${column} ${upperCompare} ${i + width}`;
+                if (req.query.filter) {
+                    query += `\nAND ${req.query.filter} = '${req.query[req.query.filter]}'`;
+                }
             }
             db.all(query, [], (err, rows) => {
                 if (err) {
@@ -81,4 +86,5 @@ exports.genres = createDistributor('genre');
 exports.types = createDistributor('type');
 exports.ratings = createAcculumatedDistributor('rating');
 exports.sizes = createAcculumatedDistributor('size');
+exports.reviews = createAcculumatedDistributor('reviews');
 exports.contentRatings = createDistributor('content_rating');

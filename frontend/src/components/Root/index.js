@@ -18,7 +18,7 @@ const Root = () => {
         <Router>
             <Layout style={{ height: '100vh' }}>
                 <Header>
-                    <div style={styles.title}>PlayStore</div>
+                    <div style={styles.title}>PlayStory</div>
                 </Header>
                 <Layout>
                     <Sider width={200}>

@@ -3,15 +3,16 @@ const db_tool = require('../db_tool');
 const config = require('./config');
 
 /**
- * Creates a count handler
- * @param {string} condition 
+ * Creates an average handler
+ * @param {string} column 
  */
-const createCounter = (column) => (req, res, next) => {
+const createAverager = (column) => (req, res, next) => {
     db_tool.get((err, db) => {
         if (err) {
             next(err);
         } else {
-            let query = `SELECT COUNT(${column}) as total FROM ${config.table}`;
+            let query = `SELECT avg(${column}) as average, count(${column}) as total
+            FROM ${config.table}`;
             if (req.query.filter) {
                 query += `\nWHERE ${req.query.filter} = '${req.query[req.query.filter]}'`;
             }
@@ -19,12 +20,11 @@ const createCounter = (column) => (req, res, next) => {
                 if (err) {
                     next(err);
                 } else {
-                    res.status(200).json({ total: rows[0].total });
+                    res.status(200).json(rows[0]);
                 }
             })
         }
     });
 }
 
-/* Counts all rows without condition */
-exports.ratings = createCounter('rating');
+exports.ratings = createAverager('rating');

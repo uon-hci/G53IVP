@@ -45,7 +45,7 @@ const GeneralStats = () => {
                     <Text strong> Productivity</Text>. The Family category contains many subcategories, notably a lot of
                     family games and activities, which with Games being the second most common category, confirms that the major
                     use for applications on the Playstore is entertainment. More can be learned about the categories in section
-                    <Link to='/categories'> Categories <Icon type='link' /></Link>.</Text>}
+                    <Link to='/categories'> Categories.</Link></Text>}
             />
             <Visualisation
                 title='Ratings'
@@ -60,7 +60,7 @@ const GeneralStats = () => {
                     Each application is thefore given an average between 1.0 and 5.0 to represent its quality. This bar graph
                     shows that a vast majority of the applications are rated between 4.0 and 5.0. Of course, ratings
                     are often posted along with a short text from the user justifying the given number of stars. These texts, along with
-                    the ratings, are addressed in more depth in section <a href='/ratings'>Ratings <Icon type='link' /></a>.</Text>}
+                    the ratings, are addressed in more depth in section <Link to='/reviews'>Reviews</Link>.</Text>}
             />
             <Visualisation
                 title='Pricing'
