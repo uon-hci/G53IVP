@@ -21,8 +21,8 @@ const Visualisation = (props) => {
         api.get(url, setData);
     }, [url]);
     return (
-        <Card style={{ marginBottom: '16px' }} 
-            title={<Title text={title} icon={icon} />} 
+        <Card loading={data.length == 0} style={{ marginBottom: '16px' }} 
+            title={<Title loading={data.length == 0} text={title} icon={icon} />} 
             extra={<Button onClick={onModeClick}><Icon type={modeIcon} />{ modeText }</Button>}>
             { Content }
         </Card>

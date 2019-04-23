@@ -73,15 +73,22 @@ const Reviews = () => {
                      </Paragraph></Typography>}
             />
             <Visualisation
-                title='Top apps by category'
+                title='Words for positive and negative reviews'
                 icon='trophy'
-                height='600px'
-                url='playstore/custom/top_sentiments/positive?wordlimit=8'
+                height='700px'
+                url='playstore/custom/top_sentiments?wordlimit=6'
                 visualisation={TopSentiments}
-                description={<Typography><Paragraph>Indeed we can see using this interactive table
-                    that the categories <Text strong>Social </Text> and <Text strong>Communication </Text>
-                    contain applications such as Facebook, Instagram, Snapchat, Gmail, Messenger, WhatsApp
-                    and more that are widely used everywhere in the world.</Paragraph></Typography>}
+                description={<Typography><Paragraph>Reviews can either be positive, neutral or negative about an application.
+                    In this data context, this metric is called the sentiment of the review. To see how
+                    positive and negative reviews can be analysed and understand how users perceive applications,
+                    the following visualisation allows you to browse the top 10 applications with the highest number of positive 
+                    reviews, and respectively for negative sentiments. For each application, a radar plot displays
+                    the top 6 words used in these reviews.</Paragraph></Typography>}
+                discussion={<Typography><Paragraph>Patterns between positive and negative sentiments can be outlined.
+                    For negative applications, words like <Text strong>ads, time, money, freezes, hate, please, give</Text> demonstrate
+                     the tendancy for users to comment about money issues, bugs with the app, specific demands or simple
+                     unhapiness with the application. On other hands, positive applications show reviews with more emphasis
+                     on how users appreciate the application and the features (<Text strong>love, like, great, easy,good</Text>). </Paragraph></Typography>}
             />
         </Wrapper>
     );

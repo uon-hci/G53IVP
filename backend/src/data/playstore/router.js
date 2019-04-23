@@ -25,8 +25,7 @@ router.get('/custom/free_paid_category', custom.freePaidByCategory);
 router.get('/custom/genre_list_category', custom.genreListByCategory);
 router.get('/custom/reviews_ratings_correlation', custom.reviewsRatingsCorrelation);
 router.get('/custom/reviews_text_mining', custom.reviewsMiner);
-router.get('/custom/top_sentiments/positive', custom.topPositiveSentiments);
-router.get('/custom/top_sentiments/negative', custom.topNegativeSentiments);
+router.get('/custom/top_sentiments', custom.topSentiments);
 
 /* Export */
 module.exports = router;
