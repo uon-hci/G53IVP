@@ -1,10 +1,9 @@
 {
     "swagger": "2.0",
-    "version": "1.0",
     "info": {
         "title": "Playstory API",
         "description": "Used for the project G53IVP",
-        "version": "1.0.1"
+        "version": "1.0.0"
       },
     "servers": [
         {
@@ -23,10 +22,7 @@
                     "content": {
                       "application/json": {
                         "schema": {
-                          "type": "array",
-                          "items": {
-                            "$ref": "#/components/schemas/pet"
-                          }
+                          "type": "array"
                         }
                       }
                     }
