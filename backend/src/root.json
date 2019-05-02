@@ -1,0 +1,33 @@
+{
+    "swagger": "2.0",
+    "version": "1.0",
+    "info": {
+        "title": "Playstory API",
+        "description": "Used for the project G53IVP",
+        "version": "1.0.1"
+      },
+    "paths": [
+        {
+            "/pets": {
+              "get": {
+                "description": "Returns all pets from the system that the user has access to",
+                "responses": {
+                  "200": {          
+                    "description": "A list of pets.",
+                    "content": {
+                      "application/json": {
+                        "schema": {
+                          "type": "array",
+                          "items": {
+                            "$ref": "#/components/schemas/pet"
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+    ]
+}
