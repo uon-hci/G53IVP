@@ -8,7 +8,7 @@ const Bar = ({ data, axis }) => {
             data={data} 
             indexBy="id"
             margin={{
-                "top": 50,
+                "top": 20,
                 "right": 130,
                 "bottom": 50,
                 "left": 60

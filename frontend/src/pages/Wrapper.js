@@ -11,13 +11,11 @@ const { Content } = Layout;
  * Wrapper component
  */
 const Wrapper = ({ children }) => {
-    return (
-        <Layout style={styles.contentLayout}>
-            <Content style={styles.content}>
-                { children }
-            </Content>
-        </Layout>
-    );
+	return (
+		<Layout style={styles.contentLayout}>
+			<Content style={styles.content}>{children}</Content>
+		</Layout>
+	);
 };
 
 export default Wrapper;

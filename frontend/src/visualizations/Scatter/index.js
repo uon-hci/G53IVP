@@ -9,7 +9,7 @@ const Scatter = ({ data, axis }) => {
             symbolSize={10}
             data={data}
             colors={{
-                "scheme": "red_yellow_green"
+                "scheme": axis.color || "red_yellow_green"
             }}
             margin={{
                 "top": 20,
@@ -20,11 +20,11 @@ const Scatter = ({ data, axis }) => {
             xScale={{
                 "type": "linear",
                 "min": 0,
-                "max": 8000000
+                "max": axis.xmax
             }}
             yScale={{
                 "type": "linear",
-                "min": 4,
+                "min": axis.ymin,
                 "max": "auto"
             }}
             axisLeft={{
@@ -32,7 +32,7 @@ const Scatter = ({ data, axis }) => {
                 "tickSize": 15,
                 "tickPadding": 10,
                 "tickRotation": 0,
-                "legend": "ratings",
+                "legend": 'ratings',
                 "legendPosition": "middle",
                 "legendOffset": -60
             }}
@@ -41,7 +41,7 @@ const Scatter = ({ data, axis }) => {
                 "tickSize": 5,
                 "tickPadding": 5,
                 "tickRotation": 0,
-                "legend": "reviews",
+                "legend": axis.title,
                 "legendPosition": "middle",
                 "legendOffset": 46
             }}

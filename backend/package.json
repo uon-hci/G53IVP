@@ -16,6 +16,7 @@
     "count-words-array": "^1.0.12",
     "dotenv": "^6.2.0",
     "express": "^4.16.4",
+    "moment": "^2.24.0",
     "morgan": "^1.9.1",
     "node-cache": "^4.2.0",
     "sqlite3": "^4.0.6"

@@ -6,7 +6,8 @@ import { createGlobalStyle, ThemeProvider } from 'styled-components';
 import theme from './theme';
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { fas } from '@fortawesome/free-solid-svg-icons';
-library.add(fas);
+import { fab } from '@fortawesome/free-brands-svg-icons';
+library.add(fas, fab);
 
 /* Global style */
 const GlobalStyle = createGlobalStyle`
@@ -28,14 +29,14 @@ const GlobalStyle = createGlobalStyle`
  * App
  */
 const App = () => {
-    return (
-        <React.Fragment>
-            <GlobalStyle />
-            <ThemeProvider theme={theme}>
-                <Root />
-            </ThemeProvider>
-        </React.Fragment>
-    );
+	return (
+		<React.Fragment>
+			<GlobalStyle />
+			<ThemeProvider theme={theme}>
+				<Root />
+			</ThemeProvider>
+		</React.Fragment>
+	);
 };
 
 /* Render */

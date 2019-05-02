@@ -3,6 +3,8 @@ import Introduction from './pages/Introduction';
 import GeneralStats from './pages/GeneralStats';
 import Categories from './pages/Categories';
 import Reviews from './pages/Reviews';
+import Pricing from './pages/Pricing';
+import Technical from './pages/Technical';
 
 /* Routes */
 const routes = [
@@ -29,6 +31,18 @@ const routes = [
         path: '/reviews',
         component: Reviews,
         icon: 'star'
+    },
+    {
+        name: 'Pricing',
+        path: '/pricing',
+        component: Pricing,
+        icon: 'fund'
+    },
+    {
+        name: 'Technical',
+        path: '/technical',
+        component: Technical,
+        icon: 'tool'
     }
 ];
 
