@@ -5,30 +5,10 @@
         "description": "Used for the project G53IVP",
         "version": "1.0.0"
       },
-    "servers": [
-        {
-            "url": "https://api.ivp.andynroses.me/data/playstore",
-            "description": "Production server"
-        }
-    ],
     "paths": 
         {
             "/pets": {
-              "get": {
-                "description": "Returns all pets from the system that the user has access to",
-                "responses": {
-                  "200": {          
-                    "description": "A list of pets.",
-                    "content": {
-                      "application/json": {
-                        "schema": {
-                          "type": "array"
-                        }
-                      }
-                    }
-                  }
-                }
-              }
+              "get": {}
             }
         }
     
