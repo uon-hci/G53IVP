@@ -4,12 +4,5 @@
         "title": "Playstory API",
         "description": "Used for the project G53IVP",
         "version": "1.0.0"
-      },
-    "paths": 
-        {
-            "/pets": {
-              "get": {}
-            }
-        }
-    
+      }    
 }

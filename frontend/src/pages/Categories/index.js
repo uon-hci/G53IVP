@@ -1,8 +1,6 @@
 /* Modules */
-import React, { useEffect } from 'react';
+import React from 'react';
 import Wrapper from '../Wrapper';
-import Pie from '../../visualizations/Pie';
-import Bar from '../../visualizations/Bar';
 import InstallsByCategory from '../../visualizations/Bar/InstallsByCategory';
 import FreePaidByCategory from '../../visualizations/Bar/FreePaidByCategory';
 import TopInstallsByCategory from '../../visualizations/TopInstallsByCategory';

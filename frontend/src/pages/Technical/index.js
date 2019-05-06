@@ -37,19 +37,21 @@ const Technical = () => {
 						<Paragraph>
 							To maintain quality and user engagement, developers have to
 							frequently update their application. In the following
-							visualisation, the amount of updates each day is represented:
+							visualisation, the last update data for each application are shown
+							and summed in the following calendar:
 						</Paragraph>
 					</Typography>
 				}
 				discussion={
 					<Typography>
 						<Paragraph>
-							This calendar mainly demonstrates a very regular and fairly spread
-							amount of updates over the years. The day, month or year doesn't
-							seem to impact the number of updates. However, we notice in
-							July-August 2018, a very high spike. During these weeks, many
-							changes have been made to the playstore that could explain such
-							unusual number of updates. First, Google re-organized the
+							This calendar mainly demonstrates that most applications have
+							fairly recent updates, and that applications that haven't been
+							update for more than one year are more rare. The day, month or
+							year doesn't seem to impact the number of updates. However, we
+							notice in July-August 2018, a very high spike. During these weeks,
+							many changes have been made to the playstore that could explain
+							such unusual number of updates. First, Google re-organized the
 							discovery algorithm, pushing many developers to update their
 							application to avoid being left out by that new algorithm and
 							continue engaging users (

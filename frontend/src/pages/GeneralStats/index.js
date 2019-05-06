@@ -56,7 +56,7 @@ const GeneralStats = () => {
 				}
 			/>
 			<Visualisation
-				title="Reviews"
+				title="Ratings"
 				axis="rating ranges (stars)"
 				icon="star"
 				side
